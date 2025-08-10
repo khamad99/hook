@@ -1,0 +1,81 @@
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import "themes";
+@import "../../../node_modules/@nebular/bootstrap/styles/globals";
+@import "../../../node_modules/@nebular/theme/styles/globals";
+
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-bootstrap-global();
+}
+
+.background {
+  background-image: linear-gradient(to right top, #051937, #2b2a2b) !important;
+  position: absolute;
+  height: 70vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+nb-accordion nb-accordion-item-header {
+  border-radius: 0px !important;
+}
+
+nb-layout .layout nb-layout-header nav {
+  /*box-shadow: 3px 11px 72px -23px rgba(25,87,52,1)!important;*/
+  height: 3rem !important;
+  padding: 0 !important;
+}
+
+nb-card, nb-accordion {
+  box-shadow: 2px 5px 16px #0000001e !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-radius: 0px !important;
+}
+
+button:focus {
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6, p, label {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  color: #2c3e50 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold !important;
+  font-family: "Avenir", Helvetica, Arial, sans-serif !important;
+}
+
+.fab {
+  border-radius: 50% !important;
+  padding: 0 !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 18px !important;
+}
+
+.icons {
+  font-size: 18px !important;
+}
+
+.nb-theme-default [nbButton].btn-outline {
+  /*background-color: transparent !important;*/
+}
+
+.nb-theme-default nb-layout .layout {
+  background-color: #fafafa !important;
+  font-family: "Avenir", Helvetica, Arial, sans-serif !important;
+}
+
+.nb-theme-default nb-tabset .tabset {
+  border-top: 1px solid #ebeef2;
+}
+th{
+  white-space: nowrap;
+}

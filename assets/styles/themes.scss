@@ -1,0 +1,7 @@
+@import '~@nebular/theme/styles/_theming.scss';
+@import '~@nebular/theme/styles/themes/_default.scss';
+
+$nb-enabled-themes: (default);
+$nb-themes: nb-register-theme((
+
+), default, default);
