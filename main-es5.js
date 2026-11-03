@@ -68809,13 +68809,7 @@
                     value: function () {
                       return this._filter
                         ? this.jobs.filter(function (e) {
-                          return (
-                            ("Assigned to Vendor" === e.order_status ||
-                              "In Progress" === e.order_status ||
-                              "Site Visit Scheduled" === e.order_status ||
-                              "Call" === e.order_status) &&
-                            "Awaiting Proposal" !== e.order_type
-                          );
+                          return ["Work Completed", "Cancel Request", "Proposal Rejected", "Reassign to Insurance Vendor", "disappeared"].indexOf(e.order_status) === -1;
                         })
                         : this.jobs;
                     },

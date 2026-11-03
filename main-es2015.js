@@ -50813,12 +50813,7 @@
           getJobs() {
             return this._filter
               ? this.jobs.filter(
-                (e) =>
-                  ("Assigned to Vendor" === e.order_status ||
-                    "In Progress" === e.order_status ||
-                    "Site Visit Scheduled" === e.order_status ||
-                    "Call" === e.order_status) &&
-                  "Awaiting Proposal" !== e.order_type,
+                (e) => !["Work Completed", "Cancel Request", "Proposal Rejected", "Reassign to Insurance Vendor", "disappeared"].includes(e.order_status),
               )
               : this.jobs;
           }
